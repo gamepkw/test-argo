@@ -1,0 +1,4 @@
+docker build -t test-argo-image:latest .
+docker tag test-argo-image:latest docker.io/gamepkw/test-argo-image:latest
+docker push gamepkw/test-argo-image:latest
+docker run -d -p 8090:8090 --name test-argo-container test-argo-image:latest
