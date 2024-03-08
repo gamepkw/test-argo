@@ -2,3 +2,22 @@ docker build -t test-argo-image:latest .
 docker tag test-argo-image:latest docker.io/gamepkw/test-argo-image:latest
 docker push gamepkw/test-argo-image:latest
 docker run -d -p 8090:8090 --name test-argo-container test-argo-image:latest
+
+test-argo.gitops-example.svc.cluster.local
+
+test-argo.gitops-example.svc.cluster.local
+
+https://192.168.73.2:test-argo/test
+
+microk8s kubectl cluster-info
+microk8s kubectl describe node
+
+
+microk8s kubectl get svc test-argo -n gitops-example
+microk8s kubectl get svc test-argo-node-port -n gitops-example
+
+http://192.168.73.2:8090
+
+microk8s kubectl get pods -n gitops-example
+microk8s kubectl describe pods test-argo-7778d4fb95-gq9tl -n gitops-example
+microk8s kubectl describe pods test-argo-767769d696-8bjdl -n gitops-example
