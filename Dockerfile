@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the binary (assuming main.go is in the cmd folder)
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./app/cmd
+RUN CGO_ENABLED=0 GOOS=linux/amd64 go build -a -installsuffix cgo -o main ./app/cmd
 
 # Use a minimal base image for the final stage
 FROM alpine:latest
